@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by sam_chordas on 10/8/15.
@@ -160,7 +161,7 @@ public class Utils {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DATE, -(Constants.HISTORICAL_DATA_DAYS_SPAN - i));
         Date ithDate = calendar.getTime();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         String iThDate = simpleDateFormat.format(ithDate);
         if (iThDate.equals(receivedDate)) {
           Double open = jsonObject.getDouble("Open");

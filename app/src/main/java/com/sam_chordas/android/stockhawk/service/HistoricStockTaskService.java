@@ -17,6 +17,7 @@ import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Created by ramkr on 16-Nov-16.
@@ -38,9 +39,11 @@ public class HistoricStockTaskService extends AsyncTask<String, Integer, ArrayLi
     this.symbol = symbol;
     Calendar cal = Calendar.getInstance();
     cal.add(Calendar.DATE, 0);
-    SimpleDateFormat formattedDate = new SimpleDateFormat("yyyy-MM-dd");
+    SimpleDateFormat formattedDate = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+//    set end date as today's date
     endDate = formattedDate.format(cal.getTime());
     cal.add(Calendar.DATE, -30);
+//    set start date as date 30 days back from today
     startDate = formattedDate.format(cal.getTime());
   }
 
@@ -66,6 +69,7 @@ public class HistoricStockTaskService extends AsyncTask<String, Integer, ArrayLi
 
   @Override
   protected ArrayList<HistoricalStockData> doInBackground(String... params) {
+//    if network is available, get the historical data
     if (isNetworkAvailable) {
       try {
         OkHttpClient client = new OkHttpClient();
