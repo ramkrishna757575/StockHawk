@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Stock Hawk</string>
+  <string name="action_change_units">وحدات التغيير</string>
+  <string name="action_settings">إعدادات</string>
+  <string name="action_example">العمل سبيل المثال</string>
+  <string name="content_test">بحث عن الأوراق المالية رمز</string>
+  <string name="fab_content_description">البحث عن الأوراق المالية رمز</string>
+  <string name="network_toast">اه اوه! هذا التطبيق يتطلب اتصال بالإنترنت</string>
+  <string name="symbol_search">رمز البحث</string>
+</resources>
