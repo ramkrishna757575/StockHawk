@@ -8,4 +8,6 @@
   <string name="fab_content_description">البحث عن الأوراق المالية رمز</string>
   <string name="network_toast">اه اوه! هذا التطبيق يتطلب اتصال بالإنترنت</string>
   <string name="symbol_search">رمز البحث</string>
+  <string name="existing_stock_message">يتم حفظ هذه الأسهم بالفعل!</string>
+  <string name="no_data_message">\"لا شيء لاظهار ... تحقق من \"\nالاتصال بشبكة الإنترنت ...</string>
 </resources>
